@@ -1,0 +1,79 @@
+//
+//  ContentView.swift
+//  midterm
+//
+//  Created by CSUFTitan on 3/23/20.
+//  Copyright © 2020 Waleed Ali. All rights reserved.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+
+                ProblemFour()
+    }
+}
+
+struct ProblemOne: View {
+    var body: some View {
+        Text("I'm an iOS Developer!")
+        .frame(width: 90, height: 70)
+            .background(Color.red)
+            .frame(width: 150, height: 100)
+            .background(Color.blue)
+        .frame(width: 250, height: 250)
+            .background(Color.green)
+    }
+}
+
+struct ProblemTwo: View {
+    var body: some View {
+        Text("Live long and prosper")
+        .frame(width: 150, height: 150)
+            .background(Color.red)
+    }
+}
+
+struct ProblemThree: View {
+    var body: some View {
+        NavigationView
+            {
+                VStack
+                    {
+                        Text("Hello, World")
+                        Text("Hello, World")
+
+                }.navigationBarTitle("SwiftUI")
+                
+        }
+    }
+}
+
+struct ProblemFour: View {
+    @State var tapCount = 0
+    var body: some View {
+        Button(action: {self.tapCount += 1})
+        {
+            Text("Tap count: \(self.tapCount)")
+        }
+
+    }
+}
+
+struct ProblemFive: View {
+    @State var tapCount = 0
+    var body: some View {
+        Button(action: {self.tapCount += 1})
+        {
+            Text("Tap count: \(self.tapCount)")
+        }
+
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
